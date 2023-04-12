@@ -1,0 +1,8 @@
+Third Party Notices
+
+MIT License
+The following components are licensed under the MIT License
+
+
+GLTFUtility , Copyright (c) 2018 Thor Brigsted
+QRCoder.Unity , Copyright (c) 2013-2018 Raffael Herrmann
