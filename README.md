@@ -8,17 +8,18 @@ This is a Unity custom package that give you access to Kinetix Custom Packages m
 - Unity Version 2020.3 or higher
 - Git needs to be installed to fetch the Unity packages through the Unity Package Manager.
 
-**1.** You can add the Kinetix Package Manager by using the Unity Package Manager and import the custom package with the Git URL.
-
-**2.** Open your Unity project and open the Unity Package Manager Window on "Window > Package Manager".
+**1.** Open your Unity project and open the Unity Package Manager Window on "Window > Package Manager".
 
 <img width="738" alt="image" src="https://user-images.githubusercontent.com/111740346/232071162-21838139-6dac-4404-a12f-27c9b0c2cee6.png">
 
-**3.** In the **Package Manager** window click on the " **+** " icon in the top left corner and select **Add Package From Git URL**.
+
+**2.** In the **Package Manager** window click on the " **+** " icon in the top left corner and select **Add Package From Git URL**.
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/111740346/232071810-4ba400bc-d566-40cb-9aae-e76efcfa9a26.png">
 
-**4.** Paste in this url 
+
+**3.** Paste in this url 
+
 
 ```html
 https://github.com/git-kinetix/kinetix-unity-sdk-packagemanager.git
@@ -26,9 +27,11 @@ https://github.com/git-kinetix/kinetix-unity-sdk-packagemanager.git
 
 <img width="503" alt="image" src="https://user-images.githubusercontent.com/111740346/232072205-98d1efd0-fc87-47d0-b5fe-ac852bffb56c.png">
 
-5. Click add and wait for the import process to finish.
 
-6. Install dependencies if you don't already have those packages by clicking on the " **+** " icon on the package manager with the Git URL and paste :
+**4.** Click add and wait for the import process to finish.
+
+
+**5.** Install dependencies if you don't already have those packages by clicking on the " **+** " icon on the package manager with the Git URL and paste :
 
 ```html
 com.unity.nuget.newtonsoft-json
@@ -38,36 +41,54 @@ and
 com.unity.inputsystem
 ```
 
-7. Import TMP Essential ressources by clicking on "**Window/TextMeshPro/Import TMP Essential Ressources**"
+While adding the "com.unity.input.system" package, you may have a warning popup, select **Yes**
+
+<img width="650" alt="image" src="https://user-images.githubusercontent.com/111740346/232103840-c84c5bd4-9211-4b51-9581-58880b207a24.png">
+
+
+**6.** As our UI use new Input system, verify in "**Edit/Project Settings...**" and in the "**Player**" that your "**Active Input Handling***" is set 
+to "**Input System Package (New)**" or "**Both**"
+
+<img width="837" alt="image" src="https://user-images.githubusercontent.com/111740346/232101359-93d61e48-fca9-4105-8635-b5ddfc698e63.png">
+
+
+**7.** Import TMP Essential ressources by clicking on "**Window/TextMeshPro/Import TMP Essential Ressources**"
 
 <img width="787" alt="image" src="https://user-images.githubusercontent.com/111740346/232073524-53d6343d-b754-4d77-ab08-ae26024f99fe.png">
 
-8. Open the Kinetix Package Manager Window 
+
+**8.** Open the Kinetix Package Manager Window 
 
 <img width="525" alt="image" src="https://user-images.githubusercontent.com/111740346/232073991-2abc2c5f-1c8c-477a-8b1b-45944730cb7d.png">
 
-9. Click on "Install Core Bundle" for the Web2 Bundle or Web3 Bundle
+
+**9.** Click on "Install Core Bundle" for the Web2 Bundle or Web3 Bundle
 
 <i>This process will install the Core, UICommon and UIEmoteWheel Packages</i>
 
 <img width="460" alt="image" src="https://user-images.githubusercontent.com/111740346/232074178-0c94c3e7-bee4-46c1-8296-76c208d3aaca.png">
 
-10. Verify the packages are installed in the Unity Package Manager, click on the package "Kinetix UI Emote Wheel" and import the samples
+
+**10.** Verify the packages are installed in the Unity Package Manager, click on the package "Kinetix UI Emote Wheel" and import the samples
 
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/111740346/232077026-55ac9ca8-03e3-4004-b48b-013bafbfc273.png">
 
-11. Click on "Kinetix/Free Emotes Importer" to import basic pack of emotes
+
+**11.** Click on "Kinetix/Free Emotes Importer" to import basic pack of emotes
 
 <img width="667" alt="image" src="https://user-images.githubusercontent.com/111740346/232077376-45b1d958-2509-478e-a6b8-6f5a07871c68.png">
 
-12. Click on "Import Kinetix base emotes"
+
+**12.** Click on "Import Kinetix base emotes"
 
 <img width="303" alt="image" src="https://user-images.githubusercontent.com/111740346/232077603-23d9b270-9343-4e0a-8ee1-f1c3672919de.png">
 
-13. Open the "Basic Scene" from "Basic Demo" folder
+
+**13.** Open the "Basic Scene" sample from "Basic Demo" sample folder
 
 <img width="779" alt="image" src="https://user-images.githubusercontent.com/111740346/232077800-ea652870-72a3-4a6f-866a-2a5b962b0723.png">
 
-14. Play and enjoy the emotes 
+
+**14.** Play and enjoy the emotes 
 
 <img width="872" alt="image" src="https://user-images.githubusercontent.com/111740346/232078058-e28b48b2-9235-47c9-9b64-b7092fae708f.png">
