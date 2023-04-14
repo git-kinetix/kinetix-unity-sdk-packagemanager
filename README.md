@@ -8,7 +8,6 @@ This is a Unity custom package that give you access to Kinetix Custom Packages m
 - Unity Version 2020.3 or higher
 - Git needs to be installed to fetch the Unity packages through the Unity Package Manager.
 
-
 **1.** Open your Unity project and open the Unity Package Manager Window on "Window > Package Manager".
 
 <img width="738" alt="image" src="https://user-images.githubusercontent.com/111740346/232071162-21838139-6dac-4404-a12f-27c9b0c2cee6.png">
@@ -20,6 +19,7 @@ This is a Unity custom package that give you access to Kinetix Custom Packages m
 
 
 **3.** Paste in this url 
+
 
 ```html
 https://github.com/git-kinetix/kinetix-unity-sdk-packagemanager.git
