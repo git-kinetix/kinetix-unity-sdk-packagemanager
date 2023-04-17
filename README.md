@@ -68,6 +68,14 @@ to "**Input System Package (New)**" or "**Both**"
 
 <img width="460" alt="image" src="https://user-images.githubusercontent.com/111740346/232074178-0c94c3e7-bee4-46c1-8296-76c208d3aaca.png">
 
+On Unity 2020.x versions specifically, you may have an issue starting with :
+
+`Error: Could not load signature of Kinetix.Internal.Retargeting.Utils.CustomTransformLogger:DrawSkeleton due to: Could not load file or assembly 'Kinetix.Internal.Utils`
+
+If this happens, you can reimport the Kinetix Core Package by right clicking on "Kinetix Core" in "Packages" and select "Reimport".
+
+<img width="395" alt="image" src="https://user-images.githubusercontent.com/111740346/232483957-e8c9963e-ab5b-4020-8606-36ac5d59edbd.png">
+
 
 **10.** Verify the packages are installed in the Unity Package Manager, click on the package "Kinetix UI Emote Wheel" and import the samples
 
