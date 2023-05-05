@@ -7,8 +7,8 @@ namespace Kinetix.Editor
 {
     public class Footer: IEditorWindowComponent
     {
-        private const string DOCS_URL      = "https://kinetix.gitbook.io/kinetixplugin-resources/8gkM6I6Sep6Y2JcSLRUY/";
-        private const string CHANGELOG_URL = "https://kinetix.gitbook.io/kinetixplugin-resources/8gkM6I6Sep6Y2JcSLRUY/other/changelog";
+        private const string DOCS_URL      = "https://docs.kinetix.tech/";
+        private const string CHANGELOG_URL = "https://docs.kinetix.tech/changelog";
         private const string DISCORD_URL   = "https://discord.gg/rGa6z4pGTW";
 
         private readonly GUIStyle webButtonStyle;
