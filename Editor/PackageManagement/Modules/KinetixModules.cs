@@ -42,7 +42,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix UI Emote Wheel",
             Name        = "com.kinetix.uiemotewheel",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-uiemotewheel.git",
-            Version     = "0.6.0"
+            Version     = "0.6.1"
         };
 
         public static readonly KinetixBundleInfo CoreBundleWeb3 = new KinetixBundleInfo()
