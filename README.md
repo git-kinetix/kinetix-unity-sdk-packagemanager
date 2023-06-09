@@ -82,17 +82,20 @@ If this happens, you can reimport the Kinetix Core Package by right clicking on 
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/111740346/232077026-55ac9ca8-03e3-4004-b48b-013bafbfc273.png">
 
 
-**11.** Request your Virtual World Key through the form, you should receive it under 24 hours.
+**11.** Click on "Kinetix/Free Emotes Importer" to import basic pack of emotes
 
-=> https://docs.kinetix.tech/gs/unity/download-and-set-up/get-your-virtualworldkey
+<img width="667" alt="image" src="https://user-images.githubusercontent.com/111740346/232077376-45b1d958-2509-478e-a6b8-6f5a07871c68.png">
 
-**12.** Open the "Basic Scene" sample from "Basic Demo" sample folder
+
+**12.** Click on "Import Kinetix base emotes"
+
+<img width="303" alt="image" src="https://user-images.githubusercontent.com/111740346/232077603-23d9b270-9343-4e0a-8ee1-f1c3672919de.png">
+
+
+**13.** Open the "Basic Scene" sample from "Basic Demo" sample folder
 
 <img width="779" alt="image" src="https://user-images.githubusercontent.com/111740346/232077800-ea652870-72a3-4a6f-866a-2a5b962b0723.png">
 
-**13.** Click on "SampleScript" and put your VirtualWorldKey in the Inspector.
-
-<img width="820" alt="image" src="https://github.com/git-kinetix/kinetix-unity-sdk-packagemanager/assets/111740346/30c4f7e8-6ad2-4093-bdee-ddb6fb9d1bad">
 
 **14.** Play and enjoy the emotes 
 

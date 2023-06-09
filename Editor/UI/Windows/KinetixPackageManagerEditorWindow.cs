@@ -80,9 +80,9 @@ namespace Kinetix.Editor
         private void DrawContent()
         {
             DrawPackageManagerUpdates();
-            DrawCoreBundle(KinetixModules.CoreBundleWeb2, KinetixModules.CoreBundleWeb3);
-            DrawOrCondition();
             DrawCoreBundle(KinetixModules.CoreBundleWeb3, KinetixModules.CoreBundleWeb2);
+            DrawOrCondition();
+            DrawCoreBundle(KinetixModules.CoreBundleWeb2, KinetixModules.CoreBundleWeb3);
         }
 
         /// <summary>
@@ -221,8 +221,7 @@ namespace Kinetix.Editor
                         DrawContent(DrawContent, true);
                     });
                 }
-                
-                AnalyticsUtility.SendWebRequestEvent("CoreModuleDownloaded", _KinetixBundleInfo.Name);
+                               
             }
         }
         
