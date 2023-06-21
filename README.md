@@ -82,7 +82,7 @@ If this happens, you can reimport the Kinetix Core Package by right clicking on 
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/111740346/232077026-55ac9ca8-03e3-4004-b48b-013bafbfc273.png">
 
 
-**11.** Request your Virtual World Key through the form, you should receive it under 24 hours.
+**11.** Get your VirtualWorldKey through the next link
 
 => https://docs.kinetix.tech/gs/unity/download-and-set-up/get-your-virtualworldkey
 
