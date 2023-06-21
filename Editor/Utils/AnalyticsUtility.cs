@@ -95,7 +95,7 @@ namespace Kinetix.Editor
         {
             string Environment;
 
-            #if !UNITY_EDITOR && !DEV_KINETIX
+            #if !STAGING_KINETIX && !DEV_KINETIX
                 Environment = "Prod";
             #else
                 Environment = "PreProd";
