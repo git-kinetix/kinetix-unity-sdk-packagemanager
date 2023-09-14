@@ -151,4 +151,5 @@ namespace Kinetix.PackageManager.Editor
             throw new Exception($"Failed to check new Kinetix {_PackageName} releases. Error: {request.error} ");
         }
     }
+    
 }
