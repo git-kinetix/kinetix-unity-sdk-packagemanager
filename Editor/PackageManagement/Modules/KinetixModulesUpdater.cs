@@ -26,7 +26,6 @@ namespace Kinetix.PackageManager.Editor
         public static async Task AsyncRefreshAllBundles()
         {
             modulesStates ??= new Dictionary<string, EModuleState>();
-            await CheckModulesUpToDate(KinetixModules.CoreBundleWeb3.Modules);
             await CheckModulesUpToDate(KinetixModules.CoreBundleWeb2.Modules);
         }
         

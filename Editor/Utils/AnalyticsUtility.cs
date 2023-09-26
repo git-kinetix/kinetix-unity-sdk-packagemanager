@@ -13,7 +13,7 @@ namespace Kinetix.Editor
         private const string SegmentURL = "https://api.segment.io/v1/track";
         private const string WRITE_KEY  = "81TtulYt7ViNrarGnaL6vGsq2fCwZD0G";
 
-        public static async Task<bool> SendWebRequestEvent(string event_name, string coreBundleType)
+        public static async void SendWebRequestEvent(string event_name, string coreBundleType)
         {
             var tcs = new TaskCompletionSource<bool>();
 
@@ -51,8 +51,6 @@ namespace Kinetix.Editor
                     tcs.SetResult(true);
                 }
             }
-
-            return await tcs.Task;
         }
 
         private static Dictionary<string, object> GetEventProperties(string coreBundleType)

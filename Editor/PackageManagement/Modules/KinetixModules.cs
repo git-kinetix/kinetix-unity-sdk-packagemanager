@@ -18,7 +18,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix Core Web2",
             Name        = "com.kinetix.coreweb2",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-coreweb2.git",
-            Version     = "1.1.0"
+            Version     = "1.2.0"
         };
         
         public static readonly KinetixModuleInfo UICommonModule = new KinetixModuleInfo()
@@ -26,7 +26,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix UI Common",
             Name        = "com.kinetix.uicommon",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-uicommon.git",
-            Version     = "1.1.0"
+            Version     = "1.2.0"
         };
         
         public static readonly KinetixModuleInfo UIEmoteWheelModule = new KinetixModuleInfo()
@@ -34,39 +34,9 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix UI Emote Wheel",
             Name        = "com.kinetix.uiemotewheel",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-uiemotewheel.git",
-            Version     = "1.1.0"
+            Version     = "1.2.0"
         };
 
-        public static readonly KinetixBundleInfo CoreBundleWeb3 = new KinetixBundleInfo()
-        {
-            Name = "[WEB3] Emote Wheel Bundle",
-            Modules = new[]
-            {
-                
-                new KinetixModuleInfo()
-                {
-                    DisplayName = "Kinetix Core Web3",
-                    Name        = "com.kinetix.coreweb3",
-                    GitURL      = c_CORE_URL + "kinetix-unity-sdk-coreweb3.git",
-                    Version     = "0.7.2"
-                },
-                new KinetixModuleInfo()
-                {
-                    DisplayName = "Kinetix UI Common",
-                    Name        = "com.kinetix.uicommon",
-                    GitURL      = c_CORE_URL + "kinetix-unity-sdk-uicommon.git",
-                    Version     = "0.7.1"
-                },
-                new KinetixModuleInfo()
-                {
-                    DisplayName = "Kinetix UI Emote Wheel",
-                    Name        = "com.kinetix.uiemotewheel",
-                    GitURL      = c_CORE_URL + "kinetix-unity-sdk-uiemotewheel.git",
-                    Version     = "0.7.2"
-                }
-            }
-        };
-        
         public static readonly KinetixBundleInfo CoreBundleWeb2 = new KinetixBundleInfo()
         {
             Name = "[WEB2] Emote Wheel Bundle",

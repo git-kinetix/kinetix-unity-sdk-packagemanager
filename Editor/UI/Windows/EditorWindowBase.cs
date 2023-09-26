@@ -14,8 +14,9 @@ namespace Kinetix.Editor
         protected GUIStyle Box;
 
         private readonly GUILayoutOption windowWidth = GUILayout.Width(452);
-        private          Banner          banner;
-        private          Footer          footer;
+
+        private   Banner banner;
+        private   Footer footer;
 
         private void LoadAssets()
         {

@@ -10,11 +10,13 @@ namespace Kinetix.Editor
         private          GUIStyle        descriptionStyle;
         private          GUIStyle        buttonStyle;
 
+        
         /// <summary>
         /// Called each editor render frame
         /// </summary>
         private void OnGUI()
         {
+            
             LoadStyles();
             DrawContent(DrawContent, true);
         }
@@ -79,10 +81,9 @@ namespace Kinetix.Editor
         /// </summary>
         private void DrawContent()
         {
+            
             DrawPackageManagerUpdates();
-            DrawCoreBundle(KinetixModules.CoreBundleWeb2, KinetixModules.CoreBundleWeb3);
-            DrawOrCondition();
-            DrawCoreBundle(KinetixModules.CoreBundleWeb3, KinetixModules.CoreBundleWeb2);
+            DrawCoreBundle(KinetixModules.CoreBundleWeb2);
         }
 
         /// <summary>
@@ -143,7 +144,7 @@ namespace Kinetix.Editor
             }, true);
         }
 
-        private void DrawCoreBundle(KinetixBundleInfo _KinetixBundleInfo, KinetixBundleInfo _KinetixBundleInfoToRemove)
+        private void DrawCoreBundle(KinetixBundleInfo _KinetixBundleInfo)
         {
             Vertical(() =>
             {
@@ -156,7 +157,7 @@ namespace Kinetix.Editor
                         Horizontal(() =>
                         {
                             GUILayout.FlexibleSpace();
-                            DrawInstallCoreBundle(_KinetixBundleInfo, _KinetixBundleInfoToRemove);
+                            DrawInstallCoreBundle(_KinetixBundleInfo);
                             GUILayout.FlexibleSpace();
                         });
                     });
@@ -200,29 +201,16 @@ namespace Kinetix.Editor
             
         }
 
-        private void DrawInstallCoreBundle(KinetixBundleInfo _KinetixBundleInfo, KinetixBundleInfo _KinetixBundleInfoToRemove)
+        private void DrawInstallCoreBundle(KinetixBundleInfo _KinetixBundleInfo)
         {
             if (GUILayout.Button("Install Core Bundle", buttonStyle))
             {
-                if (KinetixModulesUpdater.IsBundleRegistered(_KinetixBundleInfoToRemove))
-                {
-                    KinetixModulesUpdater.RemoveModules(_KinetixBundleInfoToRemove.Modules, () =>
-                    {
-                        KinetixModulesUpdater.UpdateBundle(_KinetixBundleInfo, () =>
-                        {
-                            DrawContent(DrawContent, true);
-                        });
-                    });
-                }
-                else
-                {
-                    KinetixModulesUpdater.UpdateBundle(_KinetixBundleInfo, () =>
-                    {
-                        DrawContent(DrawContent, true);
-                    });
-                }
-                
                 AnalyticsUtility.SendWebRequestEvent("CoreModuleDownloaded", _KinetixBundleInfo.Name);
+
+                KinetixModulesUpdater.UpdateBundle(_KinetixBundleInfo, () =>
+                {
+                    DrawContent(DrawContent, true);
+                });
             }
         }
         
@@ -246,14 +234,6 @@ namespace Kinetix.Editor
                     DrawContent(DrawContent, true);
                 });
             }
-        }
-
-        private void DrawOrCondition()
-        {
-            Horizontal(() =>
-            {
-                GUILayout.Label("OR", descriptionStyle);
-            });
         }
     }
 }
