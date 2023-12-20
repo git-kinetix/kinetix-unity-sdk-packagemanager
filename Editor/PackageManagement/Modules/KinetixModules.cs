@@ -18,7 +18,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix Core Web2",
             Name        = "com.kinetix.coreweb2",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-coreweb2.git",
-            Version     = "1.3.0"
+            Version     = "1.4.0"
         };
         
         public static readonly KinetixModuleInfo UICommonModule = new KinetixModuleInfo()
@@ -39,12 +39,10 @@ namespace Kinetix.PackageManager.Editor
 
         public static readonly KinetixBundleInfo CoreBundleWeb2 = new KinetixBundleInfo()
         {
-            Name = "[WEB2] Emote Wheel Bundle",
+            Name = "Core Bundle",
             Modules = new[]
             {
-                CoreWeb2Module,
-                UICommonModule,
-                UIEmoteWheelModule
+                CoreWeb2Module
             }
         };
     }
