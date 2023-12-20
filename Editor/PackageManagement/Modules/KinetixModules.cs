@@ -39,7 +39,7 @@ namespace Kinetix.PackageManager.Editor
 
         public static readonly KinetixBundleInfo CoreBundleWeb2 = new KinetixBundleInfo()
         {
-            Name = "[WEB2] Emote Wheel Bundle",
+            Name = "Core Bundle",
             Modules = new[]
             {
                 CoreWeb2Module
