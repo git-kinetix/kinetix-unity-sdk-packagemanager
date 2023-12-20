@@ -18,7 +18,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix Core Web2",
             Name        = "com.kinetix.coreweb2",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-coreweb2.git",
-            Version     = "1.3.0"
+            Version     = "TAG_VERSION_CORE_WEB2"
         };
         
         public static readonly KinetixModuleInfo UICommonModule = new KinetixModuleInfo()
@@ -26,7 +26,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix UI Common",
             Name        = "com.kinetix.uicommon",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-uicommon.git",
-            Version     = "1.3.0"
+            Version     = "TAG_VERSION_UI_COMMON"
         };
         
         public static readonly KinetixModuleInfo UIEmoteWheelModule = new KinetixModuleInfo()
@@ -34,7 +34,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix UI Emote Wheel",
             Name        = "com.kinetix.uiemotewheel",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-uiemotewheel.git",
-            Version     = "1.3.0"
+            Version     = "TAG_VERSION_UI_EMOTE_WHEEL"
         };
 
         public static readonly KinetixBundleInfo CoreBundleWeb2 = new KinetixBundleInfo()
@@ -42,9 +42,7 @@ namespace Kinetix.PackageManager.Editor
             Name = "[WEB2] Emote Wheel Bundle",
             Modules = new[]
             {
-                CoreWeb2Module,
-                UICommonModule,
-                UIEmoteWheelModule
+                CoreWeb2Module
             }
         };
     }

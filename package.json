@@ -1,6 +1,6 @@
 {
   "name": "com.kinetix.packagemanager",
-  "version": "1.3.0",
+  "version": "TAG_BUILD_VERSION",
   "displayName": "Kinetix Package Manager",
   "description": "Kinetix Package Manager to resolve all packages related to Kinetix environment",
   "author": {
