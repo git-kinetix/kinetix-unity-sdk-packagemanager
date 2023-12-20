@@ -10,18 +10,12 @@ namespace Kinetix.Editor
         private          GUIStyle        descriptionStyle;
         private          GUIStyle        buttonStyle;
 
-#if UNITY_VSA
-        private LoginWindowComponent loginWindowComponent;
-#endif
         
         /// <summary>
         /// Called each editor render frame
         /// </summary>
         private void OnGUI()
         {
-#if UNITY_VSA
-            loginWindowComponent ??= new LoginWindowComponent();
-#endif
             
             LoadStyles();
             DrawContent(DrawContent, true);
@@ -87,13 +81,6 @@ namespace Kinetix.Editor
         /// </summary>
         private void DrawContent()
         {
-#if UNITY_VSA
-            if (!loginWindowComponent.HasLoggedIn())
-            {
-                loginWindowComponent.Draw(position);
-                return;
-            }
-#endif
             
             DrawPackageManagerUpdates();
             DrawCoreBundle(KinetixModules.CoreBundleWeb2);
