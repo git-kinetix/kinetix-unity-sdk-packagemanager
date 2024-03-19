@@ -102,9 +102,13 @@ namespace Kinetix.PackageManager.Editor
             
             EditorUtility.ClearProgressBar();
             await AsyncRefreshAllBundles();
+    
             AssetDatabase.Refresh();
+
             CompilationPipeline.RequestScriptCompilation();
             Thread.Sleep(10);
+
+            Debug.Log("Kinetix package installed successfully");
             _Callback?.Invoke();
         }
 
