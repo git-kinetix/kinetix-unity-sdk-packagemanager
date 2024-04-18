@@ -1,0 +1,45 @@
+name: Main Release Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  create_release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up GitHub CLI
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+    - name: Get Latest Pre-Release Tag
+      id: get_prerelease_tag
+      run: |
+        LATEST_TAG=$(gh release list | grep '\-pr' | head -n 1 | cut -f 1)
+        echo "Latest pre-release tag: $LATEST_TAG"
+        if [ -z "$LATEST_TAG" ]; then
+          echo "No pre-release tags found. Exiting..."
+          exit 1
+        fi
+        # Remove the '-pr' suffix from the tag
+        FINAL_TAG=${LATEST_TAG%-pr}
+        echo "Final release tag: $FINAL_TAG"
+        echo "FINAL_TAG=$FINAL_TAG" >> $GITHUB_ENV
+
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ env.FINAL_TAG }}
+          release_name: Release ${{ env.FINAL_TAG }}
+          draft: false
+          prerelease: false
+          body: Release basée sur la pré-release ${{ env.FINAL_TAG }}
