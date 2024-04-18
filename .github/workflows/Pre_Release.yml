@@ -1,0 +1,57 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Set up GitHub CLI
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+        
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Extract version from commit message
+      id: extract_version
+      run: |
+        VERSION=$(git log -1 --pretty=%B | grep -oP '\b\d+\.\d+\.\d+\b' || true)
+        if [[ -z "$VERSION" ]]; then
+          echo "No version tag found in commit message."
+          echo "skip=true" >> $GITHUB_OUTPUT
+        else
+          echo "Version found: $VERSION"
+          echo "version=$VERSION"  >> $GITHUB_OUTPUT
+          echo "skip=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Check if job should be skipped
+      if: steps.extract_version.outputs.skip == 'true'
+      run: |
+        echo "Skipping job as no version tag was found in the commit message."
+
+    - name: Delete existing release
+      if: steps.extract_version.outputs.skip == 'false'
+      run: |
+        TAG_NAME=$(git tag --list "${{ steps.extract_version.outputs.version }}-pr")
+        if [ ! -z "$TAG_NAME" ]; then
+          gh release delete "${{ steps.extract_version.outputs.version }}-pr" -y
+        fi
+
+    - name: Create Release
+      if: steps.extract_version.outputs.skip == 'false'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ steps.extract_version.outputs.version }}-pr
+          release_name: ${{ steps.extract_version.outputs.version }}-pr
+          draft: false
+          prerelease: true
+          body: ${{ steps.extract_version.outputs.version }}
