@@ -18,7 +18,7 @@ namespace Kinetix.PackageManager.Editor
             DisplayName = "Kinetix Core Web2",
             Name        = "com.kinetix.coreweb2",
             GitURL      = c_CORE_URL + "kinetix-unity-sdk-coreweb2.git",
-            Version     = "1.6.1"
+            Version     = "1.7.0"
         };
         
         public static readonly KinetixModuleInfo UICommonModule = new KinetixModuleInfo()
