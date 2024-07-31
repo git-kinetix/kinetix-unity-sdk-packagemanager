@@ -1,6 +1,6 @@
 {
   "name": "com.kinetix.packagemanager",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "displayName": "Kinetix Package Manager",
   "description": "Kinetix Package Manager to resolve all packages related to Kinetix environment",
   "author": {
