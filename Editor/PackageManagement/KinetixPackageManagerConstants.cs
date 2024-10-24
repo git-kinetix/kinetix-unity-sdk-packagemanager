@@ -9,7 +9,7 @@ namespace Kinetix.PackageManager.Editor
         /// <summary>
         /// Define if the version is release or dev environment
         /// </summary>
-        public static readonly bool IsProduction = false;
+        public static readonly bool IsProduction = true;
 
         public const string ASSET_FILTER           = "package";
         public const string PACKAGE_JSON           = "package.json";
